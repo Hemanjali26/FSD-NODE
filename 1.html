@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anjali Portfolio</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    p{
+        color:#f1edf3;
+    }
+    body {
+      background:  #064073;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-size: cover;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 40px; /* more space between nav links */
+      font-weight: 600;
+    }
+
+    nav a {
+      color: #ecf0f1;
+      text-decoration: none;
+      padding: 12px 18px; /* more padding */
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: #34495e;
+      outline: none;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px 60px;
+      max-width: 100%;
+      margin: 0 auto;
+      background-color: #097de3;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      background-size: cover;
+
+    }
+    #home {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    #home > p {
+      flex: 1;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+    #home img {
+      flex: 1;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.15);
+      object-fit: cover;
+      height: auto;
+      margin: 10px;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+      padding-bottom: 8px;
+      font-weight: 700;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 12px;
+    }
+    #projects ul li {
+      margin-bottom: 25px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    #projects ul li strong {
+      color: #2980b9;
+    }
+    .skills-list {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      max-width: 100%;
+      margin-top: 20px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .skills-list li {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      color: #2c3e50;
+      border-bottom: none;
+      padding-bottom: 0;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .skills-list li i {
+      color: #2980b9;
+      font-size: 1.8rem;
+      width: auto;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: #bdc3c7;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      #home {
+        flex-direction: column;
+        gap: 20px;
+      }
+      #home img {
+        max-width: 100%;
+      }
+      nav {
+        gap: 25px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      main {
+        padding: 20px;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anjali Portfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>W</h2>
+    <div style = "background-color: #3498db; border-radius: 15px; padding: 5px; margin: 10px;">
+    <section id="home">
+      <p>Hello! I'm Anjali, a passionate about 
+      <span id="element"></span>
+      </p>
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=300&q=80" alt="Anjali's Portrait" />
+      <p>Explore my skills and projects</p>
+    </section>
+    </div>
+    <hr>
+    <div style = "background-color: #3498db; border-radius: 15px; padding: 5px; margin: 10px;">
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li style = "color:#ecf0f1"><strong>Personal Blog:</strong> A responsive blog platform built with HTML, CSS, and JavaScript. Features include custom themes and SEO optimization.</li>
+        <li  style = "color:#ecf0f1"><strong>Weather App:</strong> Real-time weather application using a third-party API. Responsive design with dynamic backgrounds based on weather conditions.</li>
+        <li  style = "color:#ecf0f1"><strong>Todo List:</strong> A task manager app with a clean UI that supports task categorization and local storage persistence for offline use.</li>
+      </ul>
+    </section>
+    </div>
+    <hr>
+    <div style = "background-color: #3498db; border-radius: 15px; padding: 5px; margin: 10px;">
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><i class="fab fa-html5"></i> HTML5</li>
+        <li><i class="fab fa-css3-alt"></i> CSS3</li>
+        <li><i class="fab fa-js-square"></i> JavaScript</li>
+        <li><i class="fab fa-react"></i> React</li>
+        <li><i class="fab fa-node-js"></i> Node.js</li>
+        <li><i class="fab fa-python"></i> Python</li>
+        <li><i class="fab fa-git-alt"></i> Git</li>
+        <li><i class="fas fa-database"></i> SQL</li>
+      </ul>
+    </section>
+    </div>
+    <hr>
+    <div style = "background-color: #3498db; border-radius: 15px; padding: 5px; margin: 10px;">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a web developer with a keen eye for design and a passion for coding. I enjoy solving problems and learning new technologies to create efficient and user-friendly applications.</p>
+    </section></div>
+    
+  </main>
+   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['web developer', 'designer','coder'],
+      typeSpeed: 50,
+    });
+  </script>
+  <footer>
+    <p>Contact me at <a href="mailto:anjali@example.com">anjali@example.com</a></p>
+    <p>&copy; 2025 Anjali Portfolio</p>
+  </footer>
+</body>
+</html>
