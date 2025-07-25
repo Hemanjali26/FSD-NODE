@@ -25,8 +25,8 @@ function assignGrade(percentage) {
   console.log(`Grade: ${grade}`);
   
 }
-const marksObtained = 360;
-const totalMarks = 500;
+const marksObtained = 460;
+const totalMarks = 600;
 
 calculatePercentage(marksObtained, totalMarks, assignGrade);
 

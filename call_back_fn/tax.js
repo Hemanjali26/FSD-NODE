@@ -8,7 +8,7 @@ function displayBill(totalAmount) {
 }
 
 
-const basePrice = 1000;   
-const gstRate = 18;        
+const basePrice = 2000;   
+const gstRate = 20;        
 
 calculateTotalTax(basePrice, gstRate, displayBill);

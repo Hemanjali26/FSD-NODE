@@ -8,8 +8,8 @@ function notifyUser(interest) {
   console.log("Interest Calculation Complete");
   console.log(`Interest Earned: ₹${interest.toFixed(2)}`);
 }
-const principal = 10000; 
-const rate = 6.5;    
+const principal = 20000; 
+const rate = 8.5;    
 const time = 2;           
 
 calculateSimpleInterest(principal, rate, time, notifyUser);
