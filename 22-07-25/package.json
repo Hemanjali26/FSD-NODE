@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "needle": "^3.3.1",
+    "open": "^10.2.0"
+  }
+}
