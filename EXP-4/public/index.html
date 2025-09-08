@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student SPA</title>
+</head>
+<body onload="fetchStudents()">
+    <h1>23B01A4539 - Student Management SPA</h1>
+
+    <h2>Add Student</h2>
+    <input id="name" placeholder="Name" />
+    <input id="regno" placeholder="Reg No" />
+    <input id="className" placeholder="Class" />
+    <button onclick="addStudent()">Add</button>
+
+    <h2>Student List</h2>
+    <ul id="studentList"></ul>
+
+    <script>
+        async function fetchStudents() {
+            const res = await fetch("/students");
+            const students = await res.json();
+            document.getElementById("studentList").innerHTML = students.map(s =>
+                `<li>${s.name} (${s.regno}) - ${s.className} 
+                    <button onclick="deleteStudent('${s._id}')">Delete</button>
+                </li>`
+            ).join("");
+        }
+
+        async function addStudent() {
+            const name = document.getElementById("name").value.trim();
+            const regno = document.getElementById("regno").value.trim();
+            const className = document.getElementById("className").value.trim();
+
+            if (!name || !regno || !className) {
+                alert("All fields are required!");
+                return;
+            }
+
+            await fetch("/students", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, regno, className })
+            });
+
+            document.getElementById("name").value = "";
+            document.getElementById("regno").value = "";
+            document.getElementById("className").value = "";
+
+            await fetchStudents();
+        }
+
+        async function deleteStudent(id) {
+            await fetch(`/students/${id}`, { method: "DELETE" });
+            await fetchStudents();
+        }
+    </script>
+</body>
+</html>
